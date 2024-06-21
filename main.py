@@ -28,8 +28,12 @@ def hello_world():
 
 @app.route("/books/<int:book_id>")
 def get_book(book_id):
-    pass
+    Book = next((Book for Book in book if Book['id'] == book_id), None)
 
+    if Book:
+        return render_template("book.html",Book=Book)
+    else:
+        return "Book not found"
 
 
 if __name__ == "__main__":

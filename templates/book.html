@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ Book.title }}</title>
 </head>
 <body>
+    <h2>{{ Book.title }}</h2>
+    <p><strong>Author:</strong> {{ Book.author }}</p>
+    <p><strong>Year:</strong> {{ Book.year }}</p>
+     {% if Book.year < 1950 %}
+        <p>this book is old</p>
+     {% else %}
+  w     <p>this book is new</p>
+     {% endif %}
+
+      <a href="/"> Back</a>
 
 </body>
 </html>
