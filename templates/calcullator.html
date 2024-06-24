@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+
+    <form action="/" method="post">
+        <input type="text" name="num1" placeholder="First Number">
+        <select name="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+            <option value="power">**</option>
+            <option value="square">**(1/2)</option>
+
+        <input type="text" name="num2" placeholder="Second Number">
+        <input type="submit" value="Calculate">
+
+    </form>
+    <h2>result:{{ result }}</h2>
+</body>
+</html>
